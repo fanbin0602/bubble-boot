@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-
+        <module>bb-auth</module>
     </modules>
 
     <name>Bubble Boot</name>
@@ -43,6 +43,8 @@
         <spring-boot.version>2.4.3</spring-boot.version>
         <spring-cloud.version>2020.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+
+        <hutool.version>5.5.7</hutool.version>
     </properties>
 
     <dependencies>
@@ -62,6 +64,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
 
         <dependency>
@@ -127,5 +135,19 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <profiles.active>dev</profiles.active>
+            </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 
 </project>
