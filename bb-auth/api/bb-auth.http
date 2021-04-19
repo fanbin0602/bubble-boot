@@ -1,0 +1,47 @@
+## 授权码模式
+
+# 第一步：获取 code，需要浏览器访问
+GET {{base_url}}/oauth/authorize?response_type=code&client_id={{client_id}}&redirect_uri={{redirect_uri}}&scope={{scope}}&state={{state}}
+
+###
+
+# 第二步：获取 token
+POST localhost:3000/oauth/token
+Authorization: Basic Y2xpZW50OjEyMzQ1Ng== # base64("client 123456")
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&code=bSX6P7&redirect_uri=https%3A%2F%2Fbaidu.com%2F&client_id=client&scope=admin&state=admin&client_secret=123456
+
+###
+
+# 第三步：刷新 token
+POST localhost:3000/oauth/token
+Authorization: Basic Y2xpZW50OjEyMzQ1Ng== # base64("client 123456")
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&refresh_token=d7e6f968-17eb-48a4-8061-8fd2fce23b2f&scope=admin&state=admin
+
+###
+
+## 客户端模式
+POST localhost:3000/oauth/token
+Authorization: Basic Y2xpZW50OjEyMzQ1Ng== # base64("client 123456")
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&scope=admin
+
+###
+
+## 资源拥有者模式
+POST localhost:3000/oauth/token
+Authorization: Basic Y2xpZW50OjEyMzQ1Ng== # base64("client 123456")
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=user&password=123456&scope=admin
+
+###
+
+## 简易模式
+GET localhost:3000/oauth/authorize?response_type=token&client_id={{client_id}}&redirect_uri={{redirect_uri}}&scope={{scope}}&state={{state}}
+
+###
