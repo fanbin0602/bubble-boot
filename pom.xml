@@ -13,6 +13,7 @@
 
     <modules>
         <module>bb-auth</module>
+        <module>bb-common</module>
     </modules>
 
     <name>Bubble Boot</name>
