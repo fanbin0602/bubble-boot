@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    gateway: # 让gateway通过nacos实现自动路由转发
+      discovery:
+        locator:
+          enabled: true # locator.enabled是自动根据URL规则实现路由转发
