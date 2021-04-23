@@ -15,6 +15,7 @@
         <module>bb-auth</module>
         <module>bb-common</module>
         <module>bb-gateway</module>
+        <module>bb-urpm</module>
     </modules>
 
     <name>Bubble Boot</name>
