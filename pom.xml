@@ -48,6 +48,7 @@
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
 
         <hutool.version>5.5.7</hutool.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
     </properties>
 
     <dependencies>

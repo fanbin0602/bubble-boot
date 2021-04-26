@@ -16,6 +16,7 @@
     <description>公共模块</description>
     <modules>
         <module>bb-common-core</module>
+        <module>bb-common-mybatis</module>
     </modules>
 
 </project>
