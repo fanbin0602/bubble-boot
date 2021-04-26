@@ -9,7 +9,7 @@ import java.util.List;
  * @author fanbin
  * @date 2021/4/23
  */
-public interface RoleService {
+public interface IRoleService {
 
     /**
      * 添加

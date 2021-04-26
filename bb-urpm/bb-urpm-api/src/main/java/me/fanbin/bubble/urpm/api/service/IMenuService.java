@@ -10,7 +10,7 @@ import java.util.List;
  * @author fanbin
  * @date 2021/4/23
  */
-public interface MenuService {
+public interface IMenuService {
 
     /**
      * 添加

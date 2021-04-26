@@ -11,7 +11,7 @@ import java.util.List;
  * @author fanbin
  * @date 2021/4/23
  */
-public interface UserService {
+public interface IUserService {
 
     /**
      * 添加

@@ -7,7 +7,7 @@ import me.fanbin.bubble.urpm.api.model.SysDept;
  * @author fanbin
  * @date 2021/4/23
  */
-public interface DeptService {
+public interface IDeptService {
 
     /**
      * 添加
