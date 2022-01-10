@@ -12,4 +12,12 @@
     <artifactId>bb-urpm-biz</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>me.fanbin</groupId>
+            <artifactId>bb-urpm-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>
