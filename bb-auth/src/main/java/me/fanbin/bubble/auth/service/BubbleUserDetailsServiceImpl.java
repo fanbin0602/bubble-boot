@@ -17,12 +17,12 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class BubbleUserDetailsServiceImpl implements UserDetailsService {
 
-    private final PasswordEncoder passwordEncoder;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // TODO: 临时逻辑，之后对接用户管理相关的服务
-        return new User(username, passwordEncoder.encode("123456"),
+        // return new User(username, passwordEncoder.encode("123456"),
+        //        AuthorityUtils.createAuthorityList("admin"));
+        return new User(username, "123456",
                 AuthorityUtils.createAuthorityList("admin"));
     }
 
