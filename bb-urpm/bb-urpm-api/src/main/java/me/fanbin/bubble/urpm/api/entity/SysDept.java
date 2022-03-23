@@ -1,4 +1,4 @@
-package me.fanbin.bubble.urpm.api.model;
+package me.fanbin.bubble.urpm.api.entity;
 
 /**
  * 部门（父子关系）

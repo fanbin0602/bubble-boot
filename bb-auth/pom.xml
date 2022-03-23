@@ -53,6 +53,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>me.fanbin</groupId>
+            <artifactId>bb-urpm-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,4 +1,4 @@
-package me.fanbin.bubble.urpm.api.model;
+package me.fanbin.bubble.urpm.api.entity;
 
 /**
  * 角色-菜单（多对多）
