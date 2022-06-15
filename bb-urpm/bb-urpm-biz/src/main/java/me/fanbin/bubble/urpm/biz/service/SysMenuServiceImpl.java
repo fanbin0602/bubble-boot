@@ -9,7 +9,7 @@
 package me.fanbin.bubble.urpm.biz.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import me.fanbin.bubble.urpm.api.entity.SysMenu;
+import me.fanbin.bubble.urpm.api.entity.SysPermission;
 import me.fanbin.bubble.urpm.api.service.SysMenuService;
 import me.fanbin.bubble.urpm.biz.mapper.SysMenuMapper;
 
@@ -19,7 +19,7 @@ import java.util.List;
  * @author fanbin
  * @date 2022/3/11
  */
-public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> implements SysMenuService {
+public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysPermission> implements SysMenuService {
     /**
      * 根据角色 ID 查询菜单列表
      *
@@ -27,7 +27,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
      * @return
      */
     @Override
-    public List<SysMenu> listByRoleId(Integer roleId) {
+    public List<SysPermission> listByRoleId(Integer roleId) {
         return null;
     }
 }

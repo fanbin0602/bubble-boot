@@ -6,4 +6,9 @@ package me.fanbin.bubble.urpm.api.entity;
  * @date 2021/4/23
  */
 public class SysDept {
+
+    private Integer id;
+    private Integer parentId;
+    private String name;
+
 }

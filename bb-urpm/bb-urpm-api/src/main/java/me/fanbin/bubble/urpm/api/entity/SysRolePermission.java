@@ -5,5 +5,9 @@ package me.fanbin.bubble.urpm.api.entity;
  * @author fanbin
  * @date 2021/4/23
  */
-public class SysRoleMenu {
+public class SysRolePermission {
+
+    private Integer roleId;
+    private Integer permissionId;
+
 }

@@ -8,15 +8,16 @@ import lombok.Data;
  * @date 2021/4/23
  */
 @Data
-public class SysMenu {
+public class SysPermission {
 
     private Integer id;
+    private String code;
     private String name;
-    private String permission;
-    private String path;
     private Integer parentId;
-    private String icon;
     private Integer sort;
+
+    private String path;
+    private String icon;
     private String type;
 
 }

@@ -9,7 +9,7 @@
 package me.fanbin.bubble.urpm.biz.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import me.fanbin.bubble.urpm.api.entity.SysMenu;
+import me.fanbin.bubble.urpm.api.entity.SysPermission;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -17,5 +17,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2022/3/11
  */
 @Mapper
-public interface SysMenuMapper extends BaseMapper<SysMenu> {
+public interface SysMenuMapper extends BaseMapper<SysPermission> {
 }
