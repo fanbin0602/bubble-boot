@@ -53,10 +53,12 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
 
-                .antMatchers("/sms/**").permitAll()
+                .antMatchers("/sms/**")
+                .permitAll()
 
                 .antMatchers("/auth/login", "/token/**", "/actuator/**")
                 .permitAll()
+
                 .anyRequest()
                 .authenticated();
 

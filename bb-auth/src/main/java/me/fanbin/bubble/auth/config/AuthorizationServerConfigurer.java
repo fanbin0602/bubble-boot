@@ -55,7 +55,7 @@ public class AuthorizationServerConfigurer extends AuthorizationServerConfigurer
         // client_secret 以表单方式提交
         // security.allowFormAuthenticationForClients();
         // 打开验证 token 的访问权限 /oauth/check_token
-        // security.checkTokenAccess("permitAll()");
+        security.checkTokenAccess("permitAll()");
         // 开启验证端口无权限访问 /oauth/token_key
         // security.tokenKeyAccess("permitAll()");
     }

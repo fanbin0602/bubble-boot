@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +27,8 @@ public class BubbleUserDetailsServiceImpl implements UserDetailsService {
         SysUser sysUser = new SysUser();
 
         // TODO: 临时逻辑，之后对接用户管理相关的服务
-        // return new User(username, passwordEncoder.encode("123456"), AuthorityUtils.createAuthorityList("admin"));
-        return new User(username, "123456", AuthorityUtils.createAuthorityList("admin"));
+        return new User(username, new BCryptPasswordEncoder().encode("123456"), AuthorityUtils.createAuthorityList("admin"));
+        // return new User(username, "123456", AuthorityUtils.createAuthorityList("admin"));
     }
 
     private UserDetails getUserDetails() {
