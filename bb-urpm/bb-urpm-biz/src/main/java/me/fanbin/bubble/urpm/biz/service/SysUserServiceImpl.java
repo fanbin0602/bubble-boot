@@ -2,7 +2,9 @@ package me.fanbin.bubble.urpm.biz.service;
 
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import me.fanbin.bubble.urpm.api.dto.UserInfo;
@@ -54,5 +56,15 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
                 .collect(Collectors.toSet());
         userInfo.setPermissions(ArrayUtil.toArray(permissions, String.class));
         return userInfo;
+    }
+
+    @Override
+    public Integer addUser(SysUser user) {
+        return baseMapper.insert(user);
+    }
+
+    @Override
+    public IPage<SysUser> pageUser(Page<SysUser> page, SysUser conditions) {
+        return baseMapper.selectPage(page, conditions);
     }
 }
