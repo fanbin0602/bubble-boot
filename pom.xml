@@ -117,11 +117,6 @@
                 <artifactId>bb-urpm-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>me.fanbin</groupId>
-                <artifactId>bb-urpm-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -32,8 +32,8 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     /**
      * 根据用户获取用户信息
      *
-     * @param username
-     * @return
+     * @param username 用户名
+     * @return 用户信息
      */
     @Override
     public UserInfo getUserInfoByUsername(String username) {
