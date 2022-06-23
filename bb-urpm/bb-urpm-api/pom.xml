@@ -12,4 +12,12 @@
     <artifactId>bb-urpm-api</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>me.fanbin</groupId>
+            <artifactId>bb-common-mybatis</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

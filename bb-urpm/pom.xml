@@ -17,14 +17,11 @@
     <modules>
         <module>bb-urpm-api</module>
         <module>bb-urpm-biz</module>
+        <module>bb-urpm-bff</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>me.fanbin</groupId>
-            <artifactId>bb-common-mybatis</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 
 </project>

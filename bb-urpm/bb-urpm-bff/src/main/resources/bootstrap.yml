@@ -1,0 +1,22 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: bb-urpm-bff
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_HOST:localhost}:${NACOS_PORT:8848}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
+dubbo:
+  registry:
+    address: ${NACOS_HOST:localhost}:${NACOS_PORT:8848}
+    protocol: nacos
+  scan:
+    base-packages: me.fanbin.bubble.urpm.bff
