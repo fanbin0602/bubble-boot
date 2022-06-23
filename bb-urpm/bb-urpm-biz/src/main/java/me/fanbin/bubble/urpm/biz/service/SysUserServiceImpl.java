@@ -15,6 +15,7 @@ import me.fanbin.bubble.urpm.api.service.SysMenuService;
 import me.fanbin.bubble.urpm.api.service.SysRoleService;
 import me.fanbin.bubble.urpm.api.service.SysUserService;
 import me.fanbin.bubble.urpm.biz.mapper.SysUserMapper;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import java.util.Collection;
 import java.util.List;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
  * @author fanbin
  * @date 2022/3/11
  */
+@DubboService()
 @RequiredArgsConstructor
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
 

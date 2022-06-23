@@ -17,6 +17,7 @@
     <modules>
         <module>bb-common-core</module>
         <module>bb-common-mybatis</module>
+        <module>bb-common-web</module>
     </modules>
 
 </project>

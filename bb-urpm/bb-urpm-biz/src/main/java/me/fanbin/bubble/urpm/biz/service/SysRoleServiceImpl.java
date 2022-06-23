@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import me.fanbin.bubble.urpm.api.entity.SysRole;
 import me.fanbin.bubble.urpm.api.service.SysRoleService;
 import me.fanbin.bubble.urpm.biz.mapper.SysRoleMapper;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import java.util.List;
 
@@ -19,12 +20,13 @@ import java.util.List;
  * @author fanbin
  * @date 2022/3/11
  */
+@DubboService
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> implements SysRoleService {
     /**
      * 根据用户 ID 查询角色列表
      *
-     * @param userId
-     * @return
+     * @param userId 用户ID
+     * @return 角色列表
      */
     @Override
     public List<SysRole> listByUserId(Integer userId) {
